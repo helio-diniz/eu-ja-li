@@ -1,0 +1,72 @@
+<ui:composition template="/WEB-INF/template/LayoutPadrao.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+    
+  
+    <ui:define name="titulo">Livros</ui:define>
+    
+    <ui:define name="corpo">
+		<h:form id="frmHome">
+			<h1>Livros</h1>
+			<p:messages autoUpdate="true" closable="true"/>
+			<p:toolbar style="margin-top: 10px">
+				<p:toolbarGroup>
+					<p:commandButton value="Pesquisar" action="#{livrosBean.pesquisar}" 
+						update="@form" id="pesquisar"/>
+				</p:toolbarGroup>
+			</p:toolbar>
+			<p:panelGrid id="panel" columns="4" style="width=100%; margin-top:10px" 
+				columnClasses="rotulo, campo">
+				<h:outputLabel value="Titulo" for="titulo"/>
+				<p:inputText id="titulo" size="50" maxlength="100" value="#{livrosBean.livroFilter.titulo}"/>
+				
+				<h:outputLabel value="Editora" for="editora"/>
+				<p:inputText id="editora" size="50" maxlength="100" value="#{livrosBean.livroFilter.editora}"/>
+				
+				<h:outputLabel value = "Estilo" for='estilo'/>
+				<p:selectManyCheckbox value="#{livrosBean.livroFilter.estilos}" id="estilo">
+					<f:selectItems value="#{livrosBean.estilos}" var="estilo"
+						itemValue="#{estilo}" itemLabel="#{estilo.descricao}"/>
+				</p:selectManyCheckbox>
+							
+				<h:outputLabel value="Ano de Publicação" for="anoPublicacao"/>
+				<p:inputText id="anoPublicacao" size="10" value="#{livrosBean.livroFilter.anoPublicacao}"/>	
+			</p:panelGrid>
+			
+			<p:dataTable id="livros" value="#{livrosBean.livrosFiltrados}" var="livro"
+				style="margin-top:10px;" emptyMessage="Nenhum livro encontrado" rows="10"
+				paginator="true" paginatorAlwaysVisible="false" paginatorPosition="bottom"
+				rowsPerPageTemplate="10 15 20">
+		
+				<p:column headerText="Id" style="text-align: center; width:10px">
+					<h:outputText value="#{livro.id}" />
+				</p:column>				
+				<p:column headerText="Titulo" style="text-align: center; width:175px">
+					<h:outputText value="#{livro.titulo}"/>
+				</p:column>
+				<p:column headerText="Editora" style="text-align: center; width:25px">
+					<h:outputText value="#{livro.editora}"/>
+				</p:column>				
+				<p:column headerText="Estilo" style="text-align: center; width:40px">
+					<h:outputText value="#{livro.estilo.descricao}"/>
+				</p:column>
+				<p:column headerText="Páginas" style="text-align: center; width:15px">
+					<h:outputText value="#{livro.paginas}"/>
+				</p:column>				
+				<p:column headerText="Ano de Publicação" style="text-align: center; width:25px">
+					<h:outputText value="#{livro.anoPublicacao}"/>
+				</p:column>		
+				<p:column  style="text-align: center; width: 10px">
+					<p:button icon="ui-icon-pencil" title="Editar" outcome="/Livro">
+						<f:param name="livro" value="#{livro.id}"/>
+					</p:button>
+				</p:column>	
+			</p:dataTable>
+			
+		</h:form>
+    </ui:define>
+
+</ui:composition>

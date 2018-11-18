@@ -1,0 +1,124 @@
+<dataset>
+	<USUARIO ID="1" NOME="José Silva" CODIGO="jose.silva" SENHA="123" PONTOS="0" QUANTIDADE_TROFEUS="0"/> 
+	<USUARIO ID="2" NOME="Carlos Silva" CODIGO="carlos.silva" SENHA="123" PONTOS="0" QUANTIDADE_TROFEUS="0"/>  
+	<USUARIO ID="3" NOME="Maria Martins" CODIGO="maria.martins" SENHA="123" PONTOS="0" QUANTIDADE_TROFEUS="0"/> 
+	<USUARIO ID="4" NOME="Lúcia Amaro" CODIGO="lucia.amaro" SENHA="123" PONTOS="0" QUANTIDADE_TROFEUS="0"/> 
+	<USUARIO ID="5" NOME="Marcos Martins" CODIGO="marcos.martins" SENHA="123" PONTOS="0" QUANTIDADE_TROFEUS="0"/> 
+	<USUARIO ID="6" NOME="Edvaldo Pereira" CODIGO="edivaldo.pereira" SENHA="123" PONTOS="0" QUANTIDADE_TROFEUS="0"/> 
+	<USUARIO ID="7" NOME="Nilo Silvério" CODIGO="nilo.silverio" SENHA="123" PONTOS="0" QUANTIDADE_TROFEUS="0"/> 
+	<USUARIO ID="8" NOME="Luciana Campos" CODIGO="luciana.campos" SENHA="123" PONTOS="0" QUANTIDADE_TROFEUS="0"/>
+	<USUARIO ID="9" NOME="Maurício Silveira" CODIGO="mauricio.silveira" SENHA="123" PONTOS="0" QUANTIDADE_TROFEUS="0"/> 
+	<USUARIO ID="10" NOME="Marcelo Meireles" CODIGO="marcelo.meireles" SENHA="123" PONTOS="0" QUANTIDADE_TROFEUS="0"/> 
+	<USUARIO ID="11" NOME="Carla Ferrari" CODIGO="carla.ferrari" SENHA="123" PONTOS="0" QUANTIDADE_TROFEUS="0"/> 
+	<USUARIO ID="12" NOME="Mariana Zambonaro" CODIGO="mariana.zambonaro" SENHA="123" PONTOS="0" QUANTIDADE_TROFEUS="0"/> 
+	<USUARIO ID="13" NOME="Lucas Souza" CODIGO="lucas.souza" SENHA="123" PONTOS="0" QUANTIDADE_TROFEUS="0"/> 
+	<USUARIO ID="14" NOME="Ana Paula Félix" CODIGO="ana.felix" SENHA="123" PONTOS="0" QUANTIDADE_TROFEUS="0"/> 
+	<USUARIO ID="15" NOME="Lúcio Duarte" CODIGO="lucio.duarte" SENHA="123" PONTOS="0" QUANTIDADE_TROFEUS="0"/> 
+	
+	<LIVRO ID="1" TITULO="O que é DevOps?: Colaboração como caminho para entregar valor ao negócio" IMAGEM_CAPA="DevOps2.jpg" 
+		ESTILO="INFORMATICA" EDITORA="KINDLE" PAGINAS="26" ANO_PUBLICACAO="2016"/>
+	<LIVRO ID="2" TITULO="DevOps na prática: entrega de software confiável e automatizada" IMAGEM_CAPA="DevOps.jpg"
+		ESTILO="INFORMATICA" EDITORA="Casa do Código" PAGINAS="257" ANO_PUBLICACAO="2015"/>
+	<LIVRO ID="3" TITULO="Descomplicando o Docker" IMAGEM_CAPA="Docker.jpg"
+		ESTILO="INFORMATICA" EDITORA="BRASPORT" PAGINAS="120" ANO_PUBLICACAO="2016"/>
+	<LIVRO ID="4" TITULO="Scrum e Métodos Ágeis: Um Guia Prático" IMAGEM_CAPA="Scrum.jpg"
+		ESTILO="INFORMATICA" EDITORA="BRASPORT" PAGINAS="110" ANO_PUBLICACAO="2016"/>
+	<LIVRO ID="5" TITULO="Scrum: Gestão ágil para projetos de sucesso" IMAGEM_CAPA="ScrumProjetos.jpg"
+		ESTILO="INFORMATICA" EDITORA="Casa do Código" PAGINAS="297" ANO_PUBLICACAO="2015"/>
+	<LIVRO ID="6" TITULO="Programação de Software em Java" IMAGEM_CAPA="Java.jpg"
+		ESTILO="INFORMATICA" EDITORA="Universo dos Livros" PAGINAS="160" ANO_PUBLICACAO="2014"/>
+	<LIVRO ID="7" TITULO="Introdução ao jQuery" IMAGEM_CAPA="jQuery.jpg"
+		ESTILO="INFORMATICA" EDITORA="Itacaiunas" PAGINAS="142" ANO_PUBLICACAO="2015"/>
+	<LIVRO ID="8" TITULO="Culinária Francesa Bistrô Clássico" IMAGEM_CAPA="Bistro.jpg"
+		ESTILO="CULINARIA" EDITORA="Casa dos Livros" PAGINAS="160" ANO_PUBLICACAO="2013"/>
+	<LIVRO ID="9" TITULO="Risotos" IMAGEM_CAPA="Risotos.jpg"
+		ESTILO="CULINARIA" EDITORA="Senac SP" PAGINAS="114" ANO_PUBLICACAO="2013"/>
+	<LIVRO ID="10" TITULO="Massas Gourmet" IMAGEM_CAPA="Massas.jpg"
+		ESTILO="CULINARIA" EDITORA="Senac SP" PAGINAS="112" ANO_PUBLICACAO="2015"/>
+	<LIVRO ID="11" TITULO="Tortas Deliciosas (Minicozinha)" IMAGEM_CAPA="Tortas.jpg"
+		ESTILO="CULINARIA" EDITORA="Melhoramentos" PAGINAS="86" ANO_PUBLICACAO="2014"/>
+	<LIVRO ID="12" TITULO="Carnes Deliciosas (Minicozinha)" IMAGEM_CAPA="Carne.jpg"
+		ESTILO="CULINARIA" EDITORA="Melhoramentos" PAGINAS="81" ANO_PUBLICACAO="2014"/>
+	<LIVRO ID="13" TITULO="Diário de Olivier-As Receitas da Bocaina" IMAGEM_CAPA="Olivier.jpg"
+		ESTILO="CULINARIA" EDITORA="Globo Estilo" PAGINAS="208" ANO_PUBLICACAO="2016"/>
+	<LIVRO ID="14" TITULO="Memórias Póstumas de Brás Cubas" IMAGEM_CAPA="BrasCubas.jpg"
+		ESTILO="LITERATURA_CLASSICA" EDITORA="Rafael Vidal" PAGINAS="218" ANO_PUBLICACAO="2016"/>
+	<LIVRO ID="15" TITULO="Dom Casmurro" IMAGEM_CAPA="DomCasmurro.jpg"
+		ESTILO="LITERATURA_CLASSICA" EDITORA="Wohnrecht" PAGINAS="200" ANO_PUBLICACAO="2014"/>
+	<LIVRO ID="16" TITULO="O cortiço" IMAGEM_CAPA="OCortico.jpg"
+		ESTILO="LITERATURA_CLASSICA" EDITORA="Melhoramentos" PAGINAS="264" ANO_PUBLICACAO="2015"/>
+	<LIVRO ID="17" TITULO="Quincas Borba" IMAGEM_CAPA="QuincasBorba.jpg"
+		ESTILO="LITERATURA_CLASSICA" EDITORA="Wohnrecht" PAGINAS="306" ANO_PUBLICACAO="2014"/>
+	<LIVRO ID="18" TITULO="Memórias de um Sargento de Milícias" IMAGEM_CAPA="SargentoMilicia.jpg"
+		ESTILO="LITERATURA_CLASSICA" EDITORA="Centaur " PAGINAS="201" ANO_PUBLICACAO="2012"/>
+	<LIVRO ID="19" TITULO="Triste Fim de Policarpo Quaresma" IMAGEM_CAPA="PolicarpoQuaresma.jpg"
+		ESTILO="LITERATURA_CLASSICA" EDITORA="Centaur " PAGINAS="176" ANO_PUBLICACAO="2011"/>
+	<LIVRO ID="20" TITULO="Os Maias" IMAGEM_CAPA="OsMaias.jpg"
+		ESTILO="LITERATURA_CLASSICA" EDITORA="Centaur " PAGINAS="599" ANO_PUBLICACAO="2012"/>
+		
+	<AUTOR ID= "1" NOME="Adonai Medrado"/>
+	<AUTOR ID= "2" NOME="Danilo Sato"/>
+	<AUTOR ID= "3" NOME="Jeferson Fernando Noronha Vitalino"/>
+	<AUTOR ID= "4" NOME="Marcus André Nunes Castro"/>
+	<AUTOR ID= "5" NOME="Luiz Duarte"/>
+	<AUTOR ID= "6" NOME="Rafael Sabbagh"/>
+	<AUTOR ID= "7" NOME="Érico Casella Tavares de Mattos"/>
+	<AUTOR ID= "8" NOME="Felippe Alex Scheidt"/>
+	<AUTOR ID= "9" NOME="Laura Washburn"/>
+	<AUTOR ID= "10" NOME="André Boccato"/>
+	<AUTOR ID= "11" NOME="Marcelo de Breyne"/>
+	<AUTOR ID= "12" NOME="Gabriel Veneziani"/>
+	<AUTOR ID= "13" NOME="Machado de Assis"/>
+	<AUTOR ID= "14" NOME="Aloíso de Azevedo"/>
+	<AUTOR ID= "15" NOME="Lima Barreto"/>
+	<AUTOR ID= "16" NOME="Eça de Queirós"/>
+	<AUTOR ID= "17" NOME="Olivier Anquier"/>		
+	
+	 <LIVRO_AUTOR LIVRO_ID="1" AUTOR_ID= "1"/>
+	 <LIVRO_AUTOR LIVRO_ID="2" AUTOR_ID= "2"/>
+	 <LIVRO_AUTOR LIVRO_ID="3" AUTOR_ID= "3"/>
+	 <LIVRO_AUTOR LIVRO_ID="3" AUTOR_ID= "4"/>
+	 <LIVRO_AUTOR LIVRO_ID="4" AUTOR_ID= "5"/>
+	 <LIVRO_AUTOR LIVRO_ID="5" AUTOR_ID= "6"/>
+	 <LIVRO_AUTOR LIVRO_ID="6" AUTOR_ID= "7"/>
+	 <LIVRO_AUTOR LIVRO_ID="7" AUTOR_ID= "8"/>
+	 <LIVRO_AUTOR LIVRO_ID="8" AUTOR_ID= "9"/>
+	 <LIVRO_AUTOR LIVRO_ID="9" AUTOR_ID= "10"/>
+	 <LIVRO_AUTOR LIVRO_ID="10" AUTOR_ID= "10"/>
+	 <LIVRO_AUTOR LIVRO_ID="11" AUTOR_ID= "11"/>
+	 <LIVRO_AUTOR LIVRO_ID="12" AUTOR_ID= "11"/>
+	 <LIVRO_AUTOR LIVRO_ID="13" AUTOR_ID= "17"/>
+	 <LIVRO_AUTOR LIVRO_ID="14" AUTOR_ID= "13"/>
+	 <LIVRO_AUTOR LIVRO_ID="15" AUTOR_ID= "13"/>
+	 <LIVRO_AUTOR LIVRO_ID="16" AUTOR_ID= "14"/>
+	 <LIVRO_AUTOR LIVRO_ID="17" AUTOR_ID= "13"/>
+	 <LIVRO_AUTOR LIVRO_ID="18" AUTOR_ID= "14"/>
+	 <LIVRO_AUTOR LIVRO_ID="19" AUTOR_ID= "15"/>
+	 <LIVRO_AUTOR LIVRO_ID="20" AUTOR_ID= "16"/>		
+
+	 <TROFEU/>	
+	 
+	 <TROFEU_LIVRO/>
+	 
+	 <LEITURA/>
+	 
+	<GRUPO ID = "1" NOME = "Administradores" DESCRICAO = "Administradores" />
+	<GRUPO ID = "2" NOME = "leitores" DESCRICAO = "Leitores" />
+	
+	<USUARIO_GRUPO USUARIO_ID="1" GRUPO_ID="1"/>
+	<USUARIO_GRUPO USUARIO_ID="2" GRUPO_ID="1"/>
+	<USUARIO_GRUPO USUARIO_ID="3" GRUPO_ID="1"/>
+	<USUARIO_GRUPO USUARIO_ID="4" GRUPO_ID="1"/>
+	<USUARIO_GRUPO USUARIO_ID="5" GRUPO_ID="1"/>
+	<USUARIO_GRUPO USUARIO_ID="6" GRUPO_ID="1"/>
+	<USUARIO_GRUPO USUARIO_ID="7" GRUPO_ID="1"/>
+	<USUARIO_GRUPO USUARIO_ID="8" GRUPO_ID="1"/>
+	<USUARIO_GRUPO USUARIO_ID="9" GRUPO_ID="1"/>
+	<USUARIO_GRUPO USUARIO_ID="10" GRUPO_ID="1"/>
+	<USUARIO_GRUPO USUARIO_ID="11" GRUPO_ID="1"/>
+	<USUARIO_GRUPO USUARIO_ID="12" GRUPO_ID="1"/>
+	<USUARIO_GRUPO USUARIO_ID="13" GRUPO_ID="1"/>
+	<USUARIO_GRUPO USUARIO_ID="14" GRUPO_ID="1"/>
+	<USUARIO_GRUPO USUARIO_ID="15" GRUPO_ID="2"/>
+
+</dataset>

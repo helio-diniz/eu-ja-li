@@ -1,0 +1,80 @@
+<ui:composition template="/WEB-INF/template/LayoutPadrao.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:o="http://omnifaces.org/ui">
+    
+  
+    <ui:define name="titulo">Leituras do Usuario</ui:define>
+    
+    <ui:define name="corpo">
+    
+		<h:form id="frmLeiturasUsuario">
+			<h1>Leituras do Usuario</h1>
+			<p:messages autoUpdate="true" closable="true"/>
+
+			<p:panelGrid id="panel" columns="2" style="width=100%; margin-top:10px" 
+				columnClasses="rotulo, campo">
+				<h:outputLabel value="Nome" for="nome"/>
+				<p:inputText id="nome" size="100" value="#{usuarioBean.usuario.nome}" readonly="true"/>
+				
+				<h:outputLabel value="Quantidade de Pontos" for="pontos"/>
+				<p:inputText id="pontos" size="10" value="#{usuarioBean.usuario.pontos}"/>
+				
+				<h:outputLabel value="Quantidade de Trofeus Conquistados" for="quantidadeTrofeus"/>
+				<p:inputText id="quantidadeTrofeus" size="10" value="#{usuarioBean.usuario.quantidadeTrofeus}"/>
+			</p:panelGrid>
+			
+			<div>
+				<p:dataTable id="trofeus" value="#{usuarioBean.usuario.trofeus}" var="trofeu"
+					style="margin-top:10px;" emptyMessage="Nenhum trofeu encontrado" rows="5"
+					paginator="true" paginatorAlwaysVisible="false" paginatorPosition="bottom"
+					rowsPerPageTemplate="5 10 15">
+					<p:column headerText="Id" style="margin-top: 10px; width: 20px">
+						<h:outputText value="#{trofeu.id}"/>
+					</p:column>
+					<p:column headerText="Estilo" style="margin-top: 10px; width: 40px">
+						<h:outputText value="#{trofeu.estilo.descricao}"/>
+					</p:column>
+					<p:column headerText="Estado" style="margin-top: 10px; width: 40px">
+						<h:outputText value="#{trofeu.estado.descricao}"/>
+					</p:column>
+					<p:column headerText="Quantidade de Livros" style="margin-top: 10px; width: 30px">
+						<h:outputText value="#{trofeu.quantidadeLivros}"/>
+					</p:column>
+		    		<p:column headerText="Livros" style="width: 30px; text-align: center">
+		    			<p:commandButton icon="ui-icon-extlink" title="Livros" action="#{usuarioBean.buscarLivrosTrofeu}"
+		    					process="@this" oncomplete="PF('mostraLivrosTrofeu').show()" update=":frmLeiturasUsuario:mostraLivrosTrofeuDialog">
+		    				<f:setPropertyActionListener target="#{usuarioBean.trofeuSelecionado}" value="#{trofeu}" />
+		    			</p:commandButton>
+		    		</p:column>
+				</p:dataTable>							
+			</div>
+			<p:dialog id="mostraLivrosTrofeuDialog" header="Livros do Trofeu" widgetVar="mostraLivrosTrofeu" modal="true">
+				<p:dataTable id="livrosTrofeu" value="#{usuarioBean.trofeuSelecionado.livros}" var="livro"
+					style="margin-top:10px;" emptyMessage="Nenhum livro encontrado do trofeu selecionado" rows="5"
+					paginator="true" paginatorAlwaysVisible="false" paginatorPosition="bottom"
+					rowsPerPageTemplate="5 10 15">
+					<p:column headerText="Id" style="margin-top: 10px; width: 20px">
+						<h:outputText value="#{livro.id}"/>
+					</p:column>
+					<p:column headerText="Titulo" style="margin-top: 10px; width: 40px">
+						<h:outputText value="#{livro.titulo}"/>
+					</p:column>
+					<p:column headerText="Editora" style="margin-top: 10px; width: 40px">
+						<h:outputText value="#{livro.editora}"/>
+					</p:column>
+					<p:column headerText="Paginas" style="margin-top: 10px; width: 30px">
+						<h:outputText value="#{livro.paginas}"/>
+					</p:column>
+					<p:column headerText="Ano de Publicacao" style="margin-top: 10px; width: 30px">
+						<h:outputText value="#{livro.anoPublicacao}"/>
+					</p:column>
+				</p:dataTable>
+			</p:dialog>	
+		</h:form>
+    </ui:define>
+
+</ui:composition>

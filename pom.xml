@@ -1,0 +1,176 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  	<modelVersion>4.0.0</modelVersion>
+  	<groupId>coursera.org</groupId>
+  	<artifactId>EuJaLi</artifactId>
+  	<version>1.0.0-SNAPSHOT</version>
+  	<packaging>war</packaging>
+  	<name>Eu já li</name>
+  	<description>Portal de leitura de livros</description>
+  
+  	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+	<dependencies>
+		<!-- 01 Mojarra (implementação do JSF2)   2.3.2-->
+		<dependency>
+			<groupId>org.glassfish</groupId>
+			<artifactId>javax.faces</artifactId>
+			<version>2.1.21</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<!-- 01 PrimeFaces (Biblioteca de Componentes -->
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>6.1</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<!-- 02 Weld Tomcat (Implementação CDI)  3.0.0.Alpha1 -->
+		<dependency>
+    		<groupId>org.jboss.weld.servlet</groupId>
+    		<artifactId>weld-servlet</artifactId>
+    		<version>1.1.10.Final</version>          		  			
+		</dependency>
+		
+		<!-- 03 Log4j -->		
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+			<scope>compile</scope>						
+		</dependency>
+
+		
+		<!-- 03 Apache - Commons Logging (abstrai a implementação do logging  1.2-->
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.3</version>				
+		</dependency>
+		
+		<!-- 03 Common Lang (utilidades - para Criteria JPA) 3.6-->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.1</version>
+			<scope>compile</scope>								
+		</dependency>
+		
+		<!-- 04 Núcleo do Hibernate 5.2.10.Final-->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>4.2.3.Final</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<!-- 04 Implementação de EntityManager do JPA 5.2.10.Final -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>4.2.3.Final</version>
+			<scope>compile</scope> 
+		</dependency>
+	
+		<!-- 04 Driver JDBC do MySQL 8.0.7-dmr-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.25</version>
+			<scope>compile</scope>	
+		</dependency>		
+		
+		<!-- 05 Implementação do Bean Validation 6.0.2.Final-->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>5.0.1.Final</version>
+			<scope>compile</scope>				
+		</dependency>
+		
+		<!-- 06 Dbunit -->
+		<dependency>
+		    <groupId>org.dbunit</groupId>
+		    <artifactId>dbunit</artifactId>
+		    <version>2.5.3</version>		    
+		</dependency>
+		
+		<!-- 07 OmniFaces (utilitario para JSF) -->
+		<dependency>
+			<groupId>org.omnifaces</groupId>
+			<artifactId>omnifaces</artifactId>
+			<version>1.5</version>
+			<scope>compile</scope>		
+		</dependency>
+		
+		<!-- 08 Spring Security -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>3.1.4.RELEASE</version>			
+		</dependency> 
+		
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>3.1.4.RELEASE</version>			
+		</dependency>
+		 
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>3.1.4.RELEASE</version>			
+		</dependency>
+		
+		<!-- 09 Javax Servlet 3.0.1 -->
+		<dependency>
+        	<groupId>javax.servlet</groupId>
+       		<artifactId>javax.servlet-api</artifactId>
+       		<version>3.0.1</version>
+     	    <scope>provided</scope> 	    
+        </dependency>
+		
+	</dependencies>
+	
+	<build>
+		<finalName>${project.artifactId}</finalName>
+		<plugins> 			
+  			<plugin>
+            	<!-- Este plugin determina a versão JavaSE-1.7 para o Maven 3.6.1 -->
+            	<groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.0</version>
+                <configuration>
+                	<!-- Especifca Java 1.7 -->
+                    <source>1.7</source>
+                    <target>1.7</target>
+                    <executable>${JDK7}\bin\javac</executable>
+                </configuration>
+            </plugin>
+		</plugins>
+	</build>	
+	
+	<repositories>
+		<!-- Primefaces -->
+		<repository>
+			<id>prime-repo</id>
+			<name>PrimeFaces Maven Repository</name>
+			<url>http://repository.primefaces.org</url>
+			<layout>default</layout>
+		</repository>
+		
+		<!--Spring Security  -->
+	    <repository>
+	        <id>spring-milestones</id>
+	        <name>Spring Milestones</name>
+	        <url>https://repo.spring.io/libs-milestone</url>
+	        <snapshots>
+	            <enabled>false</enabled>
+	        </snapshots>
+  	  </repository>		
+	</repositories>
+	
+</project>

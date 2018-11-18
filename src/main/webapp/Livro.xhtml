@@ -1,0 +1,62 @@
+<ui:composition template="/WEB-INF/template/LayoutPadrao.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:o="http://omnifaces.org/ui">
+  
+    <ui:define name="titulo">Livro</ui:define>
+    
+    <ui:define name="corpo">  
+     	<f:metadata>
+	  		<o:viewParam name="livro" value="#{livroBean.livro}"/>
+	  		<!--   <o:viewParam name="usuario" value="#{livroBean.usuario}"/> -->
+    	</f:metadata>
+    	   
+	    <h:form id="frmLivro">
+		    <p:messages autoUpdate="true" closable="true" id="mensagens"/>
+		    
+		    <h1> Livro</h1>		 
+		    <p:toolbar style="margin-top: 20px">
+		    	<p:toolbarGroup>
+		    		<p:commandButton value="Marcar Lido" id="botaoMarcarLido"
+		    			action="#{livroBean.marcarLido}" update="@form"/>
+		    	</p:toolbarGroup>
+		    	<p:toolbarGroup align="right" style="margin-top: 5px;">
+		    		<h:outputText value = "Usuario: #{livroBean.usuario.nome}" id="usuario"/>
+		    	</p:toolbarGroup>
+		    	
+		    </p:toolbar>
+		    <p:panelGrid columns="2" style="width: 100%; margin-top: 20px;"
+		    	columnClasses="rotulo, campo">   			   		
+		    
+		    	<h:outputLabel value="Titulo" for="titulo"/>
+		    	<h:panelGroup>	    	
+		    		<p:graphicImage library="images" name="#{livroBean.imagemCapa}" height="200px" id="capaImagem"/>	
+		    		<br/>
+		    		<h:inputText id="titulo" size="100" maxlenght="100" readonly="true" 
+		    			value="#{livroBean.livro.titulo}" />		    	
+		    	</h:panelGroup>
+		    	
+		    	<h:outputText value="Editora" for="editora" />
+		    	<p:inputText id="editora" size="100" maxlength="100" readonly="true" 
+		    		value="#{livroBean.livro.editora}"/>
+		    
+		    	<h:outputText value="Estilo" for = "estilo"/>
+		    	<p:inputText id="estilo" size="50" maxlength="50" readonly="true" 
+		    		value="#{livroBean.livro.estilo.descricao}"/>
+		    	
+		    	<h:outputText value="Páginas" for="paginas"/>
+		    	<p:inputText id="paginas" size="50" maxlength="50" readonly="true" 
+		    		value="#{livroBean.livro.paginas}"/>	
+		    	
+		    	<h:outputText value="Ano de Publicação" for="anoPublicacao"/>
+		    	<p:inputText id="anoPublicacao" size="50" maxlength="50" readonly="true" 
+		    		value="#{livroBean.livro.anoPublicacao}"/>
+		    </p:panelGrid>
+	    </h:form>
+
+    </ui:define>
+
+</ui:composition>
